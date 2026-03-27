@@ -5,8 +5,6 @@ Percy visual regression snapshots for client sites.
 ## Setup
 
 ```bash
-cp .env.example .env
-# Add your PERCY_TOKEN to .env
 npm install
 ```
 
@@ -26,9 +24,29 @@ npm run snap:lindauer
 
 ## Adding a new project
 
-1. Add the project config to `config/projects.js`
-2. Add its pages to `config/pages.js`
-3. Add an npm script shortcut to `package.json`
+1. Add the project config to `config/projects.js`:
+```js
+newProject: {
+  name: "New Project Name",
+  baseUrl: "https://newproject.com"
+}
+```
+
+2. Add its pages to `config/pages.js`:
+```js
+newProject: [
+  '/',
+  '/about/',
+  '/contact/'
+]
+```
+
+3. Add the npm script to `package.json`:
+```json
+"snap:newProject": "npx percy exec -- node snapshots.js newProject"
+```
+
+> The project key (e.g. `newProject`) must match exactly across all three files.
 
 ## Structure
 
