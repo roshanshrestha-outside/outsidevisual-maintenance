@@ -7,7 +7,8 @@
     "snap:royalmtSTG": "npx percy exec -- node src/snapshots.js royalmtSTG",
     "snap:lindauer": "npx percy exec -- node src/snapshots.js lindauer",
     "snap:cghVercel": "node src/snapshots-vercel.js cghVercel",
-    "snap:energyHub": "node src/snapshots-vercel.js energyHub"
+    "snap:energyHub": "node src/snapshots-vercel.js energyHub",
+    "snap:gersonLive": "node src/snapshots-vercel.js gersonLive"
   },
   "dependencies": {
     "@percy/cli": "latest",

@@ -21,5 +21,11 @@ module.exports = {
   energyHub: {
     name: "Energy Hub",
     baseUrl: "https://energy-hub-outside.vercel.app"
+  },
+  gersonLive: {
+    name: "Gerson",
+    baseUrl: "https://gerson.org"
   }
+
+  
 };
