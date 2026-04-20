@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Percy visual regression snapshots for client sites",
   "scripts": {
-    "snap:royalmtLive": "npx percy exec -- node snapshots.js royalmtLive",
-    "snap:royalmtSTG": "npx percy exec -- node snapshots.js royalmtSTG",
-    "snap:lindauer": "npx percy exec -- node snapshots.js lindauer"
+    "snap:royalmtLive": "npx percy exec -- node src/snapshots.js royalmtLive",
+    "snap:royalmtSTG": "npx percy exec -- node src/snapshots.js royalmtSTG",
+    "snap:lindauer": "npx percy exec -- node src/snapshots.js lindauer",
+    "snap:cghVercel": "node src/snapshots-vercel.js cghVercel",
+    "snap:energyHub": "node src/snapshots-vercel.js energyHub"
   },
   "dependencies": {
     "@percy/cli": "latest",

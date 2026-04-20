@@ -1,17 +1,17 @@
 const puppeteer = require('puppeteer');
 const percySnapshot = require('@percy/puppeteer');
 
-const projects = require('./config/projects');
-const pages = require('./config/pages');
+const projects = require('../config/projects');
+const pages = require('../config/pages');
 
-// Usage: npx percy exec -- node snapshots.js <project-name>
-// Example: npx percy exec -- node snapshots.js royalmtLive
+// Usage: npx percy exec -- node src/snapshots.js <project-name>
+// Example: npx percy exec -- node src/snapshots.js royalmtLive
 
 const projectName = process.argv[2];
 
 if (!projectName) {
   console.log('\nUsage:');
-  console.log('  npx percy exec -- node snapshots.js <project-name>\n');
+  console.log('  npx percy exec -- node src/snapshots.js <project-name>\n');
   console.log('Available projects:');
   Object.keys(projects).forEach(p => console.log(`  - ${p}`));
   console.log('');
